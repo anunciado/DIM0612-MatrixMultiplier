@@ -1,88 +1,52 @@
-# Project Title
+# Matrix Multiplier
 
-One Paragraph of project description goes here
+A matrix multiplier with a sequential solution or a concurrent solution using threads.
 
-## Getting Started
+### Running
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+There are two ways to run this software:
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
+* Compile the IDE (Eclipse - Java IDE):
+1. Just open the IDE
+2. Import the project folder as a Java Project
+3. After, in the top menu click:
 ```
-Give examples
+Run -> Run Configuration -> Arguments
 ```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
+4. In Arguments, in the "Program arguments" section write, for example:
 ```
-Give the example
+2 S
 ```
+5. Click in the "Apply" button and then in the "Run" button.
+6. From this it only interacts with the system.
 
-And repeat
-
+* Compile by terminal:
+1. Enter the src folder and compile all the .java files with the following command:
 ```
-until finished
+$ java * .java -d <target_address_name>
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+2. Enter the chosen destination directory and run the following command:
 ```
-Give an example
+$ java main.Main 2 S
 ```
+3. From this it only interacts with the system.
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+Note that the integer followed by the program name represents the of the square matrices that will be handled by the program and the later characters, being S or C, respectively indicate that the sequential solution or the concurrent solution will be used. The program works as follows, in the Main class, will be called the Reader class, which will read the files contained in the project input folder in the form Aixi.txt and Bixi.txt, which hold the arrays used in the multiplication, both will be read and placed in data structures in the program. Soon after, the SequentialMultiplier or ConcurrentMultiplier will be created, depending on the character passed as parameter in the program. If it is "S", the SequentialMultiplier will be created, which will the sequentially multiply the resulting matrix elements given the two input matrices. If it is "C", the ConcurrentMultiplier will be created, which will compute the resulting matrix elements given the two input arrays, threads of the Thread subclass, named ThreadElement, will be executed simultaneously, where each one will be responsible for calculating a row of the resulting matrix. Finally, the Write class will be called, which will write the resulting matrix to the form file Cixi.txt in the output folder of the project and soon after, it will be called the Calculator class, to show the worst and the best, the mean and the standard deviation of the executed measurements, thus, ending its execution.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Eclipse](https://www.eclipse.org/) - A IDE used
 
 ## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+### Developers: 
+* **Luís Eduardo Anunciado Silva ([cruxiu@ufrn.edu.br](mailto:cruxiu@ufrn.edu.br))** 
+* **Erick de Oliveira Silva ([erickos@ufrn.edu.br](mailto:erickos@ufrn.edu.br))** 
+### Project Advisor: 
+* **Everton Ranielly de Sousa Cavalcante ([everton@dimap.ufrn.br](mailto:everton@dimap.ufrn.br))** 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+This project is licensed under the GPL 3.0 - see the [LICENSE](LICENSE) file for details
 
