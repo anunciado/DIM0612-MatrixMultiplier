@@ -2,6 +2,11 @@
 
 A matrix multiplier with a sequential solution or a concurrent solution using threads.
 
+### Prerequisites
+
+You will need to install the modules below to run the program: 
+* [java 8.0 or greater](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+
 ### Running
 
 There are two ways to run this software:
